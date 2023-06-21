@@ -3,8 +3,8 @@ import { format } from "std/datetime/mod.ts";
 import { join } from "std/path/mod.ts";
 import { exists } from "std/fs/mod.ts";
 
-import type { WeiboHotSrarchWord, ZhihuHotTopicQuestion, ZhihuHotTopicHotList } from "./types/types";
-import { weiboMergeWords,  mergeQuestions } from "./utils/utils";
+import type { WeiboHotSrarchWord, ZhihuHotTopicQuestion, ZhihuHotTopicHotList } from "./types/types.ts";
+import { weiboMergeWords,  mergeQuestions } from "./utils/utils.ts";
 
 const weiboHotSearchURL = "https://s.weibo.com/top/summary";
 // const zhihuHotSearchURL = "https://www.zhihu.com/api/v4/search/top_search";

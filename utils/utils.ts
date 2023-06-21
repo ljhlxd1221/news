@@ -1,4 +1,4 @@
-import type { ZhihuHotSearchSearchWord, WeiboHotSrarchWord, ZhihuHotTopicQuestion } from "../types/types";
+import type { ZhihuHotSearchSearchWord, WeiboHotSrarchWord, ZhihuHotTopicQuestion } from "../types/types.ts";
 
 /** 合并两次热门话题并根据 id 去重 */
 export function weiboMergeWords(
