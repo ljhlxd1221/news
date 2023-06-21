@@ -22,7 +22,3 @@ jobs:
           deno --version
       - name: Run deno fmt
         run: deno fmt --check
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
-        with:
-          draft: true
