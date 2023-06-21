@@ -43,3 +43,5 @@ jobs:
           git add .
           git commit -m "get data by github actions"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
