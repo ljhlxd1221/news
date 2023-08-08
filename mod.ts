@@ -14,7 +14,10 @@ const regexp = /<a href="(\/weibo\?q=[^"]+)".*?>(.+)<\/a>/g;
 const yyyyMMdd = format(new Date(), "yyyy-MM-dd");
 
 // 微博热搜
-const weiboHotSearchResponse = await fetch(weiboHotSearchURL);
+const headers = {
+  'cookie': 'PC_TOKEN=03d755c0ef; SUB=_2AkMTjXB8f8NxqwFRmfkWxG7jaYV_zgHEieKl0YGnJRMxHRl-yT9vqhUjtRB6OA1ek8XxurOraRZVF0v7izhDhiBa4ZLl; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WhN_O-Qkwm3xCSiBDocHei5; login_sid_t=9334a8c43dd3a7bd2a43fc31a2e3dcc3; cross_origin_proto=SSL; _s_tentry=passport.weibo.com; Apache=9561968798426.912.1691483981169; SINAGLOBAL=9561968798426.912.1691483981169; ULV=1691483981257:1:1:1:9561968798426.912.1691483981169:',
+};
+const weiboHotSearchResponse = await fetch(weiboHotSearchURL, { headers });
 
 if (!weiboHotSearchResponse.ok) {
   console.error(weiboHotSearchResponse.statusText);
